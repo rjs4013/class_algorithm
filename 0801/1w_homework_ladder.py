@@ -30,8 +30,8 @@
 #     a = int(input())
 #     N = 100
 #     arr = [list(map(int, input().split())) for _ in range(N)]
-#     di = [0, 0, -1]
-#     dj = [1, -1, 0]
+#     di = [-1, 0, 0,]
+#     dj = [0, 1, -1]
 #     start_j = 0
 #     for x in range(N):
 #         if arr[N-1][x] == 2:
@@ -61,28 +61,28 @@
 #                     break
 #     print(j)
 
-# T = 10
-# for _ in range(T):
-#     a = int(input())
-#     N = 100
-#     arr = [list(map(int, input().split())) for _ in range(N)]
-#
-#     start_j = 0
-#     for x in range(N):
-#         if arr[N-1][x] == 2:
-#             start_j = x
-#
-#     i, j = N - 1, start_j
-#     while i > 0:
-#         if j > 0 and arr[i][j-1] == 1:
-#             while j > 0 and arr[i][j-1] == 1:
-#                 j -= 1
-#             i -= 1
-#         elif j < N - 1 and arr[i][j+1] == 1:
-#             while j < N - 1 and arr[i][j+1] == 1:
-#                 j += 1
-#             i -= 1
-#         else:
-#             i -= 1
-#
-#     print(f'#{a} {j}')
+T = 10
+for _ in range(T):
+    a = int(input())
+    N = 100
+    arr = [list(map(int, input().split())) for _ in range(N)]
+
+    start_j = 0
+    for x in range(N):
+        if arr[N-1][x] == 2:
+            start_j = x
+
+    i, j = N - 1, start_j
+    while i > 0:
+        if j > 0 and arr[i][j-1] == 1:
+            while j > 0 and arr[i][j-1] == 1:
+                j -= 1
+            i -= 1
+        elif j < N - 1 and arr[i][j+1] == 1:
+            while j < N - 1 and arr[i][j+1] == 1:
+                j += 1
+            i -= 1
+        else:
+            i -= 1
+
+    print(f'#{a} {j}')
