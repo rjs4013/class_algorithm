@@ -12,3 +12,4 @@ for t in range(1, T + 1):
             i += 1
     if i > len(B) - len(A):
         print(f'#{t} {0}')
+
