@@ -9,16 +9,6 @@ def maze(i_start, j_start, visited, matrix):
         ni = i_start + di[k]
         nj = j_start + dj[k]
 
-        # if ni < 0 or ni >= N or nj < 0 or nj >= N:
-        #     continue
-        # if matrix[ni][nj] == '1':
-        #     continue
-        # if visited[ni][nj] == True:
-        #     continue
-        # visited[i_start][j_start] = True
-        # maze(ni,nj, visited, matrix)
-        # return True
-
         if 0 <= ni < N and 0 <= nj < N:
             if matrix[ni][nj] != '1' and not visited[ni][nj]:
                 visited[ni][nj] = True
